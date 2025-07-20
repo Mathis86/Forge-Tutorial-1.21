@@ -1,6 +1,7 @@
 package net.deadsck.tutorialmod.block;
 
 import net.deadsck.tutorialmod.TutorialMod;
+import net.deadsck.tutorialmod.block.custom.MagicBlock;
 import net.deadsck.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -20,9 +21,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
 
-    // Block "Alexandrite Block" ajouté au registre
-    public static final RegistryObject<Block> ALEXANDRITE_BLOCK = registerBlock(
-            "alexandrite_block",
+    public static final RegistryObject<Block> ALEXANDRITE_BLOCK = registerBlock("alexandrite_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f)
                     .requiresCorrectToolForDrops()
@@ -30,9 +29,7 @@ public class ModBlocks {
             )
     );
 
-    // Block "Raw Alexandrite Block" ajouté au registre
-    public static final RegistryObject<Block> RAW_ALEXANDRITE_BLOCK = registerBlock(
-            "raw_alexandrite_block",
+    public static final RegistryObject<Block> RAW_ALEXANDRITE_BLOCK = registerBlock("raw_alexandrite_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f)
                     .requiresCorrectToolForDrops()
@@ -40,22 +37,24 @@ public class ModBlocks {
             )
     );
 
-    // Block "Alexandrite Ore" ajouté au registre
-    public static final RegistryObject<Block> ALEXANDRITE_ORE = registerBlock(
-            "alexandrite_ore",
+    public static final RegistryObject<Block> ALEXANDRITE_ORE = registerBlock("alexandrite_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
                     .strength(4f)
                     .requiresCorrectToolForDrops()
             )
     );
 
-    // Block "Alexandrite Deepslate Ore" ajouté au registre
-    public static final RegistryObject<Block> ALEXANDRITE_DEEPSLATE_ORE = registerBlock(
-            "alexandrite_deepslate_ore",
+    public static final RegistryObject<Block> ALEXANDRITE_DEEPSLATE_ORE = registerBlock("alexandrite_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
                     .strength(5f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE)
+            )
+    );
+
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            () -> new MagicBlock(BlockBehaviour.Properties.of()
+
             )
     );
 
