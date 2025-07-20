@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 2,
+  "ingredient": {
+    "item": "tutorialmod:raw_alexandrite"
+  },
+  "result": {
+    "id": "tutorialmod:alexandrite"
+  }
+}
